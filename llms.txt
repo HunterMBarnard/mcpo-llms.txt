@@ -1,0 +1,31 @@
+# mcpo – MCP-to-OpenAPI Proxy
+
+> Exposes any Model Context Protocol (MCP) tool server as a secure, OpenAPI-compatible HTTP API—no glue code required.
+
+mcpo turns local stdio-based MCP servers into cloud-ready REST endpoints with live Swagger docs and API-key auth.
+
+## Quick Start
+
+- [Run locally](https://github.com/open-webui/mcpo#quick-usage): `uvx mcpo --port 8000 -- uvx mcp-server-time --local-timezone=America/Phoenix`
+- Docker: `docker run -p 8000:8000 ghcr.io/open-webui/mcpo:main --api-key "demo" -- uvx mcp-server-time`
+
+## API Reference
+
+- [Interactive Docs](http://localhost:8000/docs): Swagger UI generated at launch
+- [OpenAPI Schema](http://localhost:8000/openapi.json): machine-readable spec
+
+## Guides
+
+- [MCP Support in Open WebUI](https://docs.openwebui.com/openapi-servers/mcp/) – deployment & integration walkthrough
+- [Model Context Protocol Spec](https://modelcontextprotocol.io/llms-full.txt): detailed protocol reference
+
+## Source & Releases
+
+- [GitHub Repo](https://github.com/open-webui/mcpo)
+- [Changelog](https://github.com/open-webui/mcpo/blob/main/CHANGELOG.md)
+- [MIT License](https://github.com/open-webui/mcpo/blob/main/LICENSE)
+
+## Optional
+
+- [Docker Compose example](https://gist.github.com/youruser/abcdefg): binds mcpo + Open WebUI + Tailscale
+- [Community discussion on `llms.txt`](https://github.com/open-webui/open-webui/discussions/14661)
